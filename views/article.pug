@@ -1,0 +1,27 @@
+extends layout
+
+
+block content
+  .img-profile
+    img(src=`https://robohash.org/${article.author}?size=100x100`, alt="profile-pic") 
+  h1= article.title
+  span written by 
+  b= author
+  
+  br
+  .article-body= article.body
+  i= article.date
+  br
+  if user
+    if user.id ==article.author
+      a.btn.btn-primary(href='/articles/edit/'+article._id) Edit 
+      br
+      br
+      a.btn.btn-danger.delete-article(href='#',data-id=article._id) Delete
+
+
+
+
+
+
+

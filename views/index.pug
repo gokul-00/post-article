@@ -1,0 +1,13 @@
+extends layout
+
+
+block content
+   h1 #{title}
+   ul.list-group
+     each article, i in articles
+      li.list-group-item
+        .img-profile
+          img(src=`https://robohash.org/${article.author}?size=100x100`, alt="profile-pic") 
+        a(href="/articles/"+ article._id)= article.title
+        
+   

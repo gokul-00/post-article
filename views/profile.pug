@@ -1,0 +1,23 @@
+extends layout
+
+
+block content
+
+  if user
+     .img-profile
+          img(src=`https://robohash.org/${user._id}?size=100x100`, alt="profile-pic") 
+     h1= user.username
+     h5= user.name
+     h5= user.email
+     b DATE OF REGISTRATION:
+     i= user.date
+     
+     
+
+
+
+
+
+
+
+         
