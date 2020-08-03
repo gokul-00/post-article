@@ -116,6 +116,6 @@ app.use('/users', users);
 
 
 //start server
-app.listen(process.env.DATABASE_URL||3000,function(){
+app.listen(process.env.PORT||3000,function(){
     console.log('server started on port 3000...');
 });
